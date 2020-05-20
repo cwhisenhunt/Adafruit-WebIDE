@@ -62,7 +62,11 @@ curl -L https://github.com/adafruit/Adafruit-WebIDE/archive/0.8.0.tar.gz | tar x
 
 echo "**** Installing required libraries ****"
 echo "**** (nodejs-legacy npm git i2c-tools python-smbus ntp libkrb5-dev) ****"
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+cd
+wget https://nodejs.org/dist/v8.11.3/node-v8.11.3-linux-armv6l.tar.xz
+tar -xvf node-v8.11.3-linux-armv6l.tar.xz
+cd node-v8.11.3-linux-armv6l
+sudo cp -R * /usr/local/
 apt-get update
 apt-get install nodejs git i2c-tools python-smbus ntp libkrb5-dev -y
 npm install -g npm
