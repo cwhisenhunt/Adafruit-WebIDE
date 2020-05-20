@@ -67,6 +67,7 @@ wget https://nodejs.org/dist/v8.11.3/node-v8.11.3-linux-armv6l.tar.xz
 tar -xvf node-v8.11.3-linux-armv6l.tar.xz
 cd node-v8.11.3-linux-armv6l
 sudo cp -R * /usr/local/
+cd
 apt-get update
 apt-get install nodejs git i2c-tools python-smbus ntp libkrb5-dev -y
 npm install -g npm
